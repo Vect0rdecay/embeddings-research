@@ -1,30 +1,36 @@
 # Embeddings Research
 
-A simple Python project for experimenting with embeddings using OpenAI's API.
+A Python project for learning and experimenting with embeddings using OpenAI's API.
 
 ## Overview
 
-This repository contains a basic script that demonstrates how embeddings work by comparing similarities between different texts related to UAVs and autonomous devices. It's designed to understand the fundamentals of embeddings and semantic similarity.
+This repository contains two scripts that demonstrate how embeddings work by analyzing similarities between different texts related to UAVs, autonomous devices, and AI systems. It's designed to understand the fundamentals of embeddings, semantic similarity, and clustering visualization.
 
 ## What's Included
 
-- **`basic_embeddings.py`** - Main script that demonstrates embedding generation and similarity analysis
-- **`requirements.txt`** - Python dependencies (numpy, openai, python-dotenv)
+- **`basic_embeddings.py`** - Simple script demonstrating embedding generation and similarity analysis
+- **`drone_embeddings_viz.py`** - Advanced visualization script with t-SNE clustering
+- **`requirements.txt`** - Python dependencies (numpy, openai, python-dotenv, matplotlib, seaborn, scikit-learn)
 - **`.env.example`** - Template for setting up your OpenAI API key
 - **`.gitignore`** - Excludes sensitive files and Python artifacts
 
 ## Features
 
-The `basic_embeddings.py` script:
-
+### Basic Embeddings Script (`basic_embeddings.py`):
 - Generates embeddings for 8 different texts related to autonomous devices
 - Compares similarities between all pairs using cosine similarity
 - Demonstrates how similar concepts have similar vector representations
 - Shows embedding dimensions and properties
-- Provides educational insights about how embeddings work
 
-## Sample Texts Analyzed
+### Drone Visualization Script (`drone_embeddings_viz.py`):
+- Analyzes 24 drone and AI concepts across 4 categories (Hardware, Sensors, AI Systems, Drone Types)
+- Creates 2D visualizations using t-SNE dimensionality reduction
+- Implements cluster analysis and similarity verification
+- Generates high-quality PNG visualizations
 
+## Sample Concepts Analyzed
+
+### Basic Script (8 concepts):
 - **UAV**: An unmanned aerial vehicle that can fly autonomously
 - **drone**: A flying robot controlled remotely or by AI
 - **autonomous_car**: A self-driving vehicle that uses sensors and AI
@@ -33,6 +39,20 @@ The `basic_embeddings.py` script:
 - **GPS**: A satellite navigation system for determining location
 - **camera**: An optical device that captures visual information
 - **lidar**: A laser-based sensor that measures distance using light detection
+
+### Visualization Script (24 concepts across 4 categories):
+
+**Hardware Components:**
+- propeller, motor, battery, frame, landing_gear, gimbal
+
+**Sensors:**
+- camera, lidar, gps, imu, altimeter, compass
+
+**AI Systems:**
+- flight_controller, path_planner, obstacle_detection, object_recognition, autonomous_navigation, mission_planner
+
+**Drone Types:**
+- quadcopter, fixed_wing, hexacopter, delivery_drone, surveillance_drone, agricultural_drone
 
 ## Getting Started
 
@@ -59,17 +79,14 @@ The `basic_embeddings.py` script:
    # Edit .env and add your OpenAI API key
    ```
 
-5. **Run the script**:
+5. **Run the scripts**:
    ```bash
+   # Basic analysis
    python basic_embeddings.py
+   
+   # Advanced visualization
+   python drone_embeddings_viz.py
    ```
-
-## What it covers
-
-- How embeddings convert text into numerical vectors
-- How similar meanings result in similar vector representations
-- How cosine similarity measures semantic similarity
-
 
 ## Requirements
 
