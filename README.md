@@ -64,7 +64,7 @@ The `basic_embeddings.py` script:
    python basic_embeddings.py
    ```
 
-## What it covered
+## What it covers
 
 - How embeddings convert text into numerical vectors
 - How similar meanings result in similar vector representations
